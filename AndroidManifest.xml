@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.hughmarshall.metlinktimetables"
     android:versionCode="1"
@@ -7,6 +6,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +22,20 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="net.hughmarshall.metlinktimetables.DisplayMessageActivity"
+            android:label="@string/title_activity_display_message" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.hughmarshall.metlinktimetables.MainActivity" />
+        </activity>
+        <activity
+            android:name="net.hughmarshall.metlinktimetables.SpinnerActivity"
+            android:label="@string/title_activity_spinner" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="net.hughmarshall.metlinktimetables.MainActivity" />
         </activity>
     </application>
 
